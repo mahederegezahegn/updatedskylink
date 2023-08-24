@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Nanum+Myeongjo:wght@700&family=Playfair+Display+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="style.css">
+<script src="js.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Your Website</title>
+</head>
+<style>
+   .img {
+    background-color: rgb(195, 185, 185);
+    position: relative;
+    padding-bottom: 56.25%; /* Set the aspect ratio (16:9 for example) */
+    overflow: hidden;
+  }
+
+  
+  .imgs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('http://www.ictexpoethiopia.com/wp-content/uploads/2019/06/Expo-Floor-plan-2019-5-6-19.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .transparent-button {
+    background: transparent;
+    border: 2px solid blue;
+    color: blue;
+    padding:  20px 50px;
+    text-align: center;
+    margin: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .transparent-button:hover {
+    background: rgb(64, 64, 255);
+    color: white;
+    cursor: pointer;
+  }
+ .txt table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .txt th,.txt td {
+    text-align: left;
+  }
+
+ .txt th {
+    background-color: #f2f2f2;
+  }
+
+ .txt tbody {
+    height: 400px;
+    overflow-y: scroll;
+  }
+
+ .txt tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+ .txt tbody tr:hover {
+    background-color: #e3e3e3;
+  }
+</style>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+            <img  class="dark-logo" alt="Skylink Technologies" width="190" height="50" data-src-retina="https://skylinkict.com/wp-content/uploads/2023/05/log-012-160x86@2x.png" src="https://skylinkict.com/wp-content/uploads/2023/05/log-012-160x86.png" />														</a>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul  class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link  " href="index.html">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link "  href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="program.html">Program</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="exhibitors.html">Exhibitors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="attend.html">Attend</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.php">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+  
+  
+  
+  <section class="about-section" >
+   
+   
+    <div class="about-container">
+    <h1> Exhibitors</h1>
+    <div class="text-start ">
+      
+    <div class="exibitor">
+      <section class="txt pt-3">
+        <div class="container">
+          <h4>Why Exhibit</h4>
+          <div class="content">
+            <div class="illustration">
+              <!-- Add your illustration here -->
+              <img src="assets/Digital lifestyle.gif" alt="Illustration">
+            </div>
+            <div class="description">
+              <p>Meet Ethiopia’s foremost ICT leaders and gain access to a fast-growing market.</p>
+              <p>Meet buyers from one of Africa’s fastest-growing markets. With a population of 100 million people and an economy that has been growing rapidly for the past decade, Ethiopia represents a real exciting market opportunity in many sectors including ICTs.</p>
+              <p>ICT Expo Ethiopia provides the opportunity to capitalize on this potential and is a carefully crafted event combining exhibition, B2B meetings, panel discussions, and conference involving both local and international participants, all in one location.</p>
+              <p>To inquire about exhibition space or sponsorship, please contact: <a href="mailto:info@ictexpoethiopia.com">info@ictexpoethiopia.com</a></p>
+            </div>
+          </div>
+          <ul class="benefits">
+            <li><i class="fas fa-users"></i> Networking with decision makers and valuable partners in the space</li>
+            <li><i class="fas fa-globe"></i> Public and private sector unrivaled audience</li>
+            <li><i class="fas fa-plane"></i> Travel privileges</li>
+          </ul>
+          <div class="cta">
+            <a href="book.html" class="button">Book Now <i class="fas fa-arrow-down"></i></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <section class="visa-process">
+      <div class="container">
+        <h4>VISA PROCESS TO ETHIOPIA</h4>
+        <div class="content">
+          <div class="description">
+            <p>Visas are required for all foreign visitors to Ethiopia, with the exception of nationals of Kenya, Djibouti, and Diplomatic and UN passport holders.</p>
+            <p>You must first register online and receive your registration confirmation before applying for a visa.</p>
+            <p>Once registered, please email a copy of your passport to the Secretariat at <a href="mailto:info@ictexpoethiopia.com">info@ictexpoethiopia.com</a>.</p>
+            <p>The Secretariat will send you the necessary documents to apply for your conference e-visa over the following schedules:</p>
+            <ul class="approvals">
+              <li><i class="fas fa-check-circle"></i> First batch of approvals: April 21</li>
+              <li><i class="fas fa-check-circle"></i> Second batch of approvals: April 28</li>
+              <li><i class="fas fa-check-circle"></i> Third and last batch of approvals: May 5</li>
+            </ul>
+          </div>
+          <div class="illustration">
+            <img src="assets/Study abroad-pana (1).png" alt="Visa Illustration">
+          </div>
+        </div>
+        <div class="steps">
+          <h5>Once on the website, you will select:</h5>
+          <ul>
+            <li><i class="fas fa-check"></i> Conference Visa</li>
+            <li><i class="fas fa-check"></i> Government (as the inviting institution)</li>
+            <li><i class="fas fa-check"></i> Ministry of Innovation and Technology</li>
+          </ul>
+        </div>
+        <div class="requirements">
+          <h5>You will need:</h5>
+          <ul>
+            <li><i class="fas fa-check"></i> Electronic copy of your passport</li>
+            <li><i class="fas fa-check"></i> Electronic copy of your passport photo</li>
+            <li><i class="fas fa-check"></i> Electronic copy of the application letter (will be sent to you)</li>
+            <li><i class="fas fa-check"></i> Valid Credit Card to pay $32 online</li>
+          </ul>
+        </div>
+        <p class="approval-time">The process is straightforward, and you will secure your visa approval within 36 hours or less.</p>
+        <p>If you are not able to process your visa online, please notify the Secretariat for further support.</p>
+      </div>
+    </section>
+    <section class="txt pt-3">
+      <h4 style="text-align: center; color: #333;">CUSTOMS</h4>
+           
+      <div class="p-3" style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+        <p>If you are shipping materials to showcase at the expo, please note that you will have to follow the customs law of the country mainly:</p>
+        <ul>
+          <li><i class="fas fa-times"></i> You cannot sell any exhibit materials</li>
+          <li><i class="fas fa-dollar-sign"></i> Exhibit materials are subject to duty taxes</li>
+          <li><i class="fas fa-truck"></i> You are responsible for shipping and clearing your materials directly</li>
+          <li><i class="fas fa-file-alt"></i> The Secretariat will assist in getting your chosen clearing agent with the necessary documents to clear your goods</li>
+          <li><i class="fas fa-list-alt"></i> Please note that you will need to send a detailed packing list and commercial invoice on your letterhead showing each item with quantity and value</li>
+          <li><i class="fas fa-clock"></i> As certain electronic materials may require additional processes, you are strongly recommended to ship your products for the exhibit at least 20 working days ahead</li>
+          <li><i class="fas fa-map-marker-alt"></i> You will need a delivery address in Ethiopia for your goods, and note that the Secretariat cannot play that role for your goods</li>
+        </ul>
+      </div>
+    
+      <div class="img">
+        <h3 style="text-align: center; color: #333;">Floor Plan</h3>
+        <div class="imgs" style="text-align: center;">
+                  <img src="floor_plan.jpg" alt="Floor Plan" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </section>
+ 
+
+    <div class="btm">
+      <section class="txt pt-3">
+        <div class="flex-row">
+          <h4>Download the Floor Plan
+            <div class="download-button">
+              <a href="#" class="text-white">Download</a> <i class="fas fa-arrow-down"></i>
+            </div>
+          </h4>
+        </div>
+      </section>
+    
+      <section class="txt pt-3">
+        <div class="flex-row">
+          <h4>Exhibitors' Profile Form
+            <div class="download-button">
+              <a href="#" class="text-white">Download</a> <i class="fas fa-arrow-down"></i>
+            </div>
+          </h4>
+        </div>
+      </section>
+    
+      <section class="txt pt-3">
+        <div class="flex-row">
+          <h4>Download the Floor Plan
+            <div class="download-button">
+              <a href="#" class="text-white">Download</a> <i class="fas fa-arrow-down"></i>
+            </div>
+          </h4>
+        </div>
+      </section>
+    
+      <section class="txt pt-3">
+        <div class="flex-row">
+          <h4>Exhibitors Android App
+            <div class="download-button">
+              <a href="#" class="text-white">Download</a> <i class="fas fa-arrow-down"></i>
+            </div>
+          </h4>
+        </div>
+      </section>
+    </div>
+    <section class="txt">
+      <h4 >Registered companies and their booked booths</h4>
+      <table style="border:1px solid gray; padding: 0 1rem;">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Company Name</th>
+            <th>Zone</th>
+            <th>Booth No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Company 1</td>
+            <td>Zone A</td>
+            <td>Booth 101</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Company 1</td>
+            <td>Zone A</td>
+            <td>Booth 101</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Company 1</td>
+            <td>Zone A</td>
+            <td>Booth 101</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Company 1</td>
+            <td>Zone A</td>
+            <td>Booth 101</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Company 1</td>
+            <td>Zone A</td>
+            <td>Booth 101</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Company 1</td>
+            <td>Zone A</td>
+            <td>Booth 101</td>
+          </tr>
+          <!-- End of repeated row structure -->
+        </tbody>
+      </table>
+      <p style="padding: 0 1rem;">
+        
+Please contact the following local companies for assistance to book your booth, click here or call +251 (0) 118-332-421 or email info@ictexpoethiopia.com
+SPONSORSHIP
+      </p>
+      <section>
+        <div class="flex-row"><h4 style="background-color: transparent;" >Tour and Travel companies list <div class="download-button">
+          <a href="#" class="text-white">Book Now</a> <i class="fas fa-arrow-down"></i>
+         </div></h4> </div>
+      </section>
+    </section>
+
+    </div>
+  </div>
+  </section>
+
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="row justify-content-evenly">
+        <div class="col-md-4 text-center">
+          <img src="assets/Date picker.gif" alt="Date & Venue Illustration" class="illustration">
+          <h3>Date & Venue</h3>
+          <p>May 14 - May 18, 2020</p>
+          <p>Addis Ababa, Ethiopia</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="assets/Get in touch.gif" alt="Get in Touch Illustration" class="illustration">
+          <h3>Get in Touch</h3>
+          <p>Email: info@example.com<br>Phone: +1 123 456 7890</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="assets/Share link.gif" alt="Quick Links Illustration" class="illustration">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="exhibitors.html">Exhibitors</a></li>
+          </ul>
+          <div class="follow-us">
+            <h4>Follow Us</h4>
+            <ul class="social-media-icons unstyled">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
