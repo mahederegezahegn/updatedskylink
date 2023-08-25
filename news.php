@@ -4,20 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Nanum+Myeongjo:wght@700&family=Playfair+Display+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="news.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
   <title>Your Website</title>
 </head>
 <style>
-  .txt p{
-    line-height: 2.5;
-    font-size: 1.1rem ;
+  .swip .row{
+    /* background: rgba( 255, 255, 255, 0.4 ); */
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+width:fit-content;
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 2px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+text-align:center;
+
   }
-  .txt{
-    border: 1px solid black;
+  .news-card{
+ display:flex;
+ justify-content:center;
+ align-items:center;
   }
+  .news-card .row .f{
+    display:flex;
+    justify-content:space-around;
+    text-transform:capitalize;
+    
+font-weight:500;
+color:#fff;
+  }
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+} 
+.myswiper .news-card {
+  color:black;
+text-transform:capitalize' !important;
+  /* text-transform: capitalize !important; */
+}
+  </style>
 </style>
 <body>
 
@@ -51,9 +88,7 @@
             <li class="nav-item">
               <a class="nav-link active" href="news.php">News</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
@@ -64,31 +99,103 @@
   </header>
 
 
-<main>
+  <div class="containera">
+    <div class="jumbotron">
+   
+<div class="swip">
+
+<?php
+// Replace 'your_host', 'your_username', 'your_password', and 'your_database' with your actual database credentials
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'mydatabase';
+
+// Create a new mysqli connection
+$mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+// Check connection
+if ($mysqli->connect_error) {
+    die("Database connection failed: " . $mysqli->connect_error);
+}
+$query = "SELECT * FROM events where event_type='breaking-n'";
+$result = $mysqli->query($query);
+?>
+       <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+
+
+     <?php
+     
+            while ($row = $result->fetch_assoc()) {
+                $eventTitle = $row['event_title'];
+                $eventDate=$row['event_date'];
+                $eventDescription = $row['event_description'];
+                
+                $eventImage = $row['event_image'];
+
+                ?>
+
+
+                  <swiper-slide>
+                  <div class="news-card" style="background-image: url('admin/<?php echo $eventImage; ?>');
+                             background-position: center;
+                             background-size: cover;">
+                             <div class="row">
+                            <div class="f"><h1 class="text-black"><?php echo $eventTitle; ?></h1> 
+                            <h2 class="text-black"><?php echo $eventDate;?></h2> <br></div>
+                            <h3 class="text-black"><?php echo $eventDescription; ?></h3>
+                        </div>
+                        
+                    </div>
+                </swiper-slide>
+            <?php
+            }
+            ?>
+  </swiper-container>
+
+  </div>
   
 
-  <section class="about-section">
-    <div class="about-container">
-    <h1>NEWS</h1>
-    <section class="txt">
-      <h4>What's New</h4>
-      <p class="text-start p-3">
-        <strong>Ethiopia to Host the 18th Innovation Africa Digital Summit</strong><br>
+  </div>
 
-        An International Summit that focuses on the need for improved Access, Engagement and Retention, using ICT as an enabler will take place in Addis on the 6th –
-        
-        7th  April 2020. <br>
-        
-        The 18th annual Innovation Africa Digital summit (IADs) is designed to attract ICT policy makers regulators, service providers and major organisations across Africa.
-        
-        The summit will enable Policy makers and Regulators to assess how they can develop a fertile environment to support the growth of Telecoms and ICT while service providers and large organisations will explore best practices and latest technology developments to improve their services, stakeholder engagement and customer retention.
-        
-        It is expected that the participation of these key stakeholders on this summit will, in turn, attract the international solution providers, vendors, investors and high tech companies to explore opportunity for business development and to meet their potential and existing clients in a way to drive adoption of their platforms and services optimization.  
-        DATES & VE
-</p>
-    </div>
-    </section>
-</main> <section class="contact-section">
+<?php
+$query = "SELECT * FROM events WHERE event_type != 'breaking-n'";
+$result = $mysqli->query($query);
+?>
+<div class="row">
+    <?php
+    while ($row = $result->fetch_assoc()) {
+        $eventTitle = $row['event_title'];
+        $eventDate = $row['event_date'];
+        $eventDescription = $row['event_description'];
+        $eventImage = $row['event_image'];
+    ?>
+        <div class="card text-center" style="text-transform:capitalize;">
+            <img src="admin/<?php echo $eventImage; ?>" class="card-img-top" alt="News Image">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $eventTitle; ?></h5>
+                <p class="card-text"><?php echo $eventDescription; ?></p>
+                <h5 class="text-black"><?php echo $eventDate; ?></h5>
+                <hr>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
+</div>
+</div>
+
+
+
+
+
+  
+
+  
+
+
+<section class="contact-section">
   <div class="container">
     <div class="row justify-content-evenly">
       <div class="col-md-4 text-center">

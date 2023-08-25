@@ -3,7 +3,7 @@
 
     /* Header */
     body{
-      overflow: hidden;
+      /* overflow: hidden; */
       background-color: #ddd;
     }
     .header {

@@ -14,15 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $stmt = $conn->prepare("INSERT INTO exhibitors (company_name, display_name, section, mobile_Phone, office_Phone, fax, pobox, email, contact_Person, alternative_Person, payment, zone, website, booth_option1, booth_option2, booth_option3, total_sqm, approve) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    $stmt = $conn->prepare("INSERT INTO exhibitors (company_name, display_name, section, mobile_Phone, office_Phone, fax, pobox, email, contact_Person, alternative_Person, payment, zone, website, booth_option1, booth_option2, booth_option3, total_sqm, approve, method) 
+    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
     if (!$stmt) {
         die("Error in preparing the statement: " . $conn->error);
     }
-    
-    $stmt->bind_param("sssssssssssssssssi", $companyName, $displayName, $section, $mobilePhone, $officePhone, $fax, $pobox, $email, $contactPerson, $alternativePerson, $payment, $zone, $website, $boothNumber, $boothNumber2, $boothNumber3, $Totalsq, $approve);
-    
+
     // Set the values for the parameters
+    $method = 'local';
     $companyName = $_POST['companyName'];
     $displayName = $_POST['displayName'];
     $section = $_POST['section'];
@@ -41,13 +42,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $boothNumber3 = $_POST['boothNumber3'];
     $Totalsq = $_POST['Totalsq'];
     $approve = 0; // Assuming you want to set the 'approve' column to 0
-    
+
+    $stmt->bind_param("sssssssssssssssssss",
+        $companyName, $displayName, $section, $mobilePhone, $officePhone, $fax, $pobox, $email, $contactPerson, $alternativePerson, $payment, $zone, $website, $boothNumber, $boothNumber2, $boothNumber3, $Totalsq, $approve, $method);
+
     if ($stmt->execute()) {
         echo "Insertion successful!";
     } else {
         echo "Error in executing the statement: " . $stmt->error;
     }
-    
+
     $stmt->close();
     $conn->close();
 

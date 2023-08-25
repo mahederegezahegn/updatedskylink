@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Open sans', cursive !important;
    }
    .program{
     font-family: 'Poly', serif;
@@ -156,7 +158,7 @@ body{
 
     .card-layout .cards .flex-row{
       display: flex;
-      justify-content: space-around;
+      /* justify-content: start !important; */
       padding: 1rem 0;
     }
 
@@ -192,9 +194,16 @@ body{
       }
       .txt ul{
         display: grid;
-        gap: 1rem;
 
-        justify-content: space-around;
+        gap: 1rem;
+        justify-content: start;
+      }
+      .txt ul li{
+        display: grid;
+      }
+      .txts{
+        display: grid;
+    justify-content: start;
       }
     }
 
@@ -207,7 +216,7 @@ body{
     .txt .two{
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: start;
     }
     
 
@@ -278,7 +287,7 @@ body{
       }
     
       .program-section img {
-        max-width: 100%;
+        max-width: 80%;
       }
       .text{
         flex-direction: column-reverse;
@@ -338,12 +347,17 @@ body{
       .program .txt img {
         width: 100%;
       }
+      .program .txt ul{
+        display: flex;
+        flex-direction: column;
+
+      }
     }
 
    .program .txt ul{
       list-style: none;
       display:flex;
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
       gap: 3rem;
       justify-content: space-evenly;
     }
@@ -357,8 +371,10 @@ body{
     }
     .program .txt p{
       padding: 0 2rem;
+     
     }
 
+  
 
 
 
@@ -549,15 +565,15 @@ p {
 
 .txt {
   flex: 1 1 300px;
-  text-align: center;
+  text-align: start;
   margin-bottom: 20px;
 }
 
 .flex-row {
   display: flex;
   gap: 1rem;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .contact-section {

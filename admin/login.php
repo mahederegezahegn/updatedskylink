@@ -126,8 +126,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Validate the username and password (you can add your own validation logic here)
-    if (!empty($username) && !empty($password)) {
+    // Validate the username and password
+    if (empty($username) || empty($password)) {
+        $error = "Please enter both username and password.";
+    } else {
         // Assuming you have established a database connection previously
         $dbHost = 'localhost';
         $dbUsername = 'root';
@@ -140,9 +142,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        // Prepare the query to check if the username and password exist in the database
-        $query = "SELECT * FROM admins WHERE username = '$username' AND password = '$password'";
-        $result = $conn->query($query);
+        // Prepare the query to check if the username and password exist in the database (using prepared statement)
+        $query = "SELECT * FROM admins WHERE username = ? AND password = ?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
             // Valid login credentials
@@ -152,19 +157,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Redirect to index.php or perform other actions
             header('Location: index.php');
             exit();
-        } else {
+          } else {
             // Invalid login
-            $error = "Invalid username or password.";
+            $query = "SELECT * FROM admins WHERE username = ?";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+        
+            if ($result->num_rows === 0) {
+                $error = "Invalid username.";
+            } else {
+                $error = "Invalid password.";
+            }
         }
 
         // Close the database connection
+        $stmt->close();
         $conn->close();
-    } else {
-        // Empty username or password
-        $error = "Please enter both username and password.";
     }
 }
 ?>
+
+<!-- Display the error message if any -->
+<?php if (!empty($error)) : ?>
+    <p><?php echo $error; ?></p>
+<?php endif; ?>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="handleFormSubmit(event)">
         <div class="input-container">

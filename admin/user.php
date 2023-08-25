@@ -80,6 +80,9 @@ if ($result->num_rows > 0) {
             <?php
             // Loop through each row of data and generate table rows
             while ($row = $result->fetch_assoc()) {
+                $approve=$row['approve'];
+        // Generate the table rows dynamically
+        if($approve=='1'){
                 ?>
                 <tr>
                     <td class="px-6 py-4 whitespace-nowrap">
@@ -100,6 +103,7 @@ if ($result->num_rows > 0) {
                 </tr>
                 <?php
             }
+        }
             ?>
         </tbody>
     </table>

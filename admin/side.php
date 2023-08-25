@@ -15,7 +15,7 @@
         </li>
         <li>
           <a href="user.php">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-user"></i>
             Registors
           </a>
         </li>

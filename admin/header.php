@@ -11,8 +11,8 @@
         </a>
       </li>
       <li>
-        <a href="#">
-          <i class="fas fa-bell"></i>
+        <a href="admin.php">
+        <i class="fas fa-user-shield"></i>
         </a>
       </li>
       <li>
