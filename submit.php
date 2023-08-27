@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$stmt) {
         die("Error in preparing the statement: " . $conn->error);
     }
-
+    
     // Set the values for the parameters
     $method = 'local';
     $companyName = $_POST['companyName'];

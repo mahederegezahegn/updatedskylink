@@ -99,9 +99,6 @@ include_once('side.php');
         echo '<a href="exibit_aprove.php?id=' . $exhibitorId . '" class="text-blue-500 hover:text-red-700">';
         echo '<i class="fas fa-check"> </i>';
         echo '</a>';
-        // echo '<button class="text-green-500"  class="view-button"' . $exhibitorId . '" hover:text-green-700 mr-2">';
-        // echo '<i class="fas fa-eye">view</i>';
-        // echo '</button>';
         echo "<button class='email-button' data-email='$userEmail' onclick='openEmailForm(this)'>
         <i class='fas fa-envelope'></i></button>";
         echo '<a href="deleteexibit.php?id=' . $exhibitorId . '" class="text-red-500 hover:text-red-700">';
@@ -157,9 +154,9 @@ include_once('side.php');
         $companyName = $row['phone_number'];
         $exhibitorId = $row['id']; // Assuming you have an 'id' column in the exhibitors table
   
-        $approve=$row['approve'];
+        $verified=$row['verified'];
         // Generate the table rows dynamically
-        if($approve=='0'){
+        if($verified=='verified'){
         echo '<tr>';
         echo '<td class="px-6 py-4 whitespace-nowrap">';
         echo '<div class="text-sm text-gray-900">' . $fname . ' ' . $lname . '</div>';

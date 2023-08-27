@@ -1,34 +1,50 @@
-<?php 
+<?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
 
-if(isset($_POST["send"])){
-    $mail = new PHPMailer(true);
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'mahederegezaheng@gmail.com';
-    $mail->Password = 'idozelnmzyvhhavw';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
 
-    $mail->setfrom('mahederegezaheng@gmail.com');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $email=$_POST['to'];
 
-    $mail->addAddress('gezahegntadesse17@gmail.com');
-    $mail->isHTML(true);
-    $mail->Subject = 'this is demo';
-    $mail->Body = 'aknkana';
+    try {
+        $mail = new PHPMailer(true);
 
-    if ($mail->send()) {
-      header('location:index.php');
-    } else {
-        $response = ['success' => false, 'message' => 'Failed to send email. Please try again.'];
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'mahederegezaheng@gmail.com';
+        $mail->Password = 'idozelnmzyvhhavw';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
+
+        $mail->setFrom('mahederegezaheng@gmail.com');
+
+        $mail->addAddress($email);
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body = $message;
+
+        // Enable debugging mode
+        $mail->SMTPDebug = 2;
+
+        if ($mail->send()) {
+            echo 'Message has been sent';
+            header('location:approve.php');
+        } else {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
-
-    echo json_encode($response);
 }
+// Enable error reporting and display errors
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
