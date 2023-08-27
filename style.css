@@ -49,9 +49,9 @@ header nav {
     
   /* hero section start   */
   .hero-section {
-    background-image: url('assets/Polygon\ Luminary.svg');
+    background-image: url('assets/images/2 Samp;er-01.png');
     background-color: rgb(2, 0, 36);
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -374,7 +374,7 @@ background-color: #fff;
   position: relative;
   height: 30vh;
   overflow: hidden;
-  background-image: url('https://imgs.search.brave.com/dSVKQIh5U-uZUH5HNoT3yi8SYka-YHIwPFnQQaAPWtI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8z/LzM5L0RpcmVfRGF3/YV9TdGF0aW9uLmpw/Zw');
+  background-image: url('assets/images/2 Samp;er-01.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
