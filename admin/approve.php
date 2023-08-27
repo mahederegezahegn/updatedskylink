@@ -15,7 +15,7 @@
 
 <?php
 include_once('header.php');
-
+include_once('dbcon.php');
 
   echo'<div class="flex">';
  
@@ -57,14 +57,9 @@ include_once('side.php');
 </div>
 
     <?php
-    $dbHost = 'localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'mydatabase';
-    $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
+ 
     // Fetch exhibitors from the database
-    $result = $conn->query("SELECT * FROM exhibitors");
+    $result = $mysqli->query("SELECT * FROM exhibitors");
   
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
@@ -143,7 +138,7 @@ include_once('side.php');
                     <tbody>
     <?php
     // Fetch exhibitors from the database
-    $result = $conn->query("SELECT * FROM registor");
+    $result = $mysqli->query("SELECT * FROM registor");
   
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {

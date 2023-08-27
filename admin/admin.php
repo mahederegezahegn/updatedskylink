@@ -54,6 +54,7 @@
 <?php
 include_once('header.php');
 
+include_once('dbcon.php');
 
 echo '<div class="flex">';
 include_once('side.php');
@@ -79,19 +80,7 @@ include_once('side.php');
     </thead>
     <tbody>
       <?php
-      // Replace 'your_host', 'your_username', 'your_password', and 'your_database' with your actual database credentials
-$dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mydatabase';
 
-// Create a new mysqli connection
-$mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-// Check connection
-if ($mysqli->connect_error) {
-    die("Database connection failed: " . $mysqli->connect_error);
-} 
        // Fetch events from the database
        $query = "SELECT * FROM admins";
        $result = $mysqli->query($query);

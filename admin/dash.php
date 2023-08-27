@@ -65,22 +65,10 @@
 <body>
   
 <?php
-// Replace 'your_host', 'your_username', 'your_password', and 'your_database' with your actual database credentials
-$dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mydatabase';
 
-// Create a new mysqli connection
-$mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-// Check connection
-if ($mysqli->connect_error) {
-    die("Database connection failed: " . $mysqli->connect_error);
-} 
 
 include_once('header.php');
-
+include_once('dbcon.php');
 echo '<div class="flex">';
 include_once('side.php');
 ?>
@@ -180,20 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (move_uploaded_file($_FILES['event-image']['tmp_name'], $targetFile)) {
             // File upload successful, proceed to insert file path into the database
 
-            // Database connection
-            $dbHost = 'localhost';
-            $dbUsername = 'root';
-            $dbPassword = '';
-            $dbName = 'mydatabase';
-
-            // Create a new mysqli connection
-            $mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-            // Check for a connection error
-            if ($mysqli->connect_errno) {
-                echo '<script>alert("Failed to connect to the database: ' . $mysqli->connect_error . '");</script>';
-                exit;
-            }
+       
 
             // Prepare the SQL statement
             $sql = "INSERT INTO events (event_type, event_title, event_date, event_description, event_image) 

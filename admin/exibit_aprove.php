@@ -138,26 +138,13 @@ function sendemail($email)
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Assuming you have established a database connection previously
-    // Replace the placeholders with your actual database credentials
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "mydatabase";
-
-    // Create a new connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+ include_once('dbcon.php');
 
     // Update the record in the table to set 'approve' to 1 based on the ID
     $sql = "UPDATE exhibitors SET approve = 1 WHERE id = '$id'";
-    if ($conn->query($sql) === TRUE) {
+    if ($mysqli->query($sql) === TRUE) {
         // Retrieve the exhibitor's email from the database
-        $emailResult = $conn->query("SELECT email FROM exhibitors WHERE id = '$id'");
+        $emailResult = $mysqli->query("SELECT email FROM exhibitors WHERE id = '$id'");
         if ($emailResult && $emailResult->num_rows > 0) {
             $emailRow = $emailResult->fetch_assoc();
             $exhibitorEmail = $emailRow['email'];
@@ -170,11 +157,11 @@ if (isset($_GET['id'])) {
             echo "<script>alert('Email not found in the database.'); window.location.href = 'approve.php';</script>";
         }
     } else {
-        echo "<script>alert('Error updating record: " . $conn->error . "'); window.location.href = 'approve.php';</script>";
+        echo "<script>alert('Error updating record: " . $mysqli->error . "'); window.location.href = 'approve.php';</script>";
     }
 
-    // Close the database connection
-    $conn->close();
+    // Close the database mysqliection
+    $mysqli->close();
 } else {
     echo "<script>alert('No ID provided.'); window.location.href = 'approve.php';</script>";
 }

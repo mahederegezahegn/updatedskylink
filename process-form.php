@@ -1,16 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mydatabase";
-
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include_once('dbcon.php');
+        
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -119,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if the email or phone number already exists
     $checkSql = "SELECT * FROM registor WHERE email = ? OR phone_number = ?";
-    $checkStmt = $conn->prepare($checkSql);
+    $checkStmt = $mysqli->prepare($checkSql);
     $checkStmt->bind_param("ss", $email, $phoneNumber);
     $checkStmt->execute();
     $checkResult = $checkStmt->get_result();
@@ -135,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Insert the form data into the table using prepared statements
         $insertSql = "INSERT INTO registor (first_name, last_name, company_name, email, phone_number, verification_code, verify_token)
                       VALUES (?, ?, ?, ?, ?, ?, ?)";
-        $insertStmt = $conn->prepare($insertSql);
+        $insertStmt = $mysqli->prepare($insertSql);
         $insertStmt->bind_param("sssssss", $firstName, $lastName, $companyName, $email, $phoneNumber, $verificationCode, $token);
 
         if ($insertStmt->execute()) {

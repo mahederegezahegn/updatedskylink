@@ -2,24 +2,14 @@
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database configuration
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "mydatabase";
+   include_once('dbcon.php');
+        
 
-    // Create a new connection
-    $conn = new mysqli($servername, $username, $password, $database);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $stmt = $conn->prepare("INSERT INTO exhibitors (company_name, display_name, section, mobile_Phone, office_Phone, fax, pobox, email, contact_Person, alternative_Person, payment, zone, website, booth_option1, booth_option2, booth_option3, total_sqm, approve, method) 
+    $stmt = $mysqli->prepare("INSERT INTO exhibitors (company_name, display_name, section, mobile_Phone, office_Phone, fax, pobox, email, contact_Person, alternative_Person, payment, zone, website, booth_option1, booth_option2, booth_option3, total_sqm, approve, method) 
     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
     if (!$stmt) {
-        die("Error in preparing the statement: " . $conn->error);
+        die("Error in preparing the statement: " . $mysqli->error);
     }
     
     // Set the values for the parameters
@@ -53,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->close();
-    $conn->close();
+    $mysqli->close();
 
     // Redirect to a success page
     header("Location: attend.html");

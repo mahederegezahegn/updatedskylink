@@ -1,17 +1,6 @@
 <?php
 
-$dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mydatabase';
-
-// Create a new mysqli connection
-$mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-// Check connection
-if ($mysqli->connect_error) {
-    die("Database connection failed: " . $mysqli->connect_error);
-}
+include_once('dbcon.php');
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     $eventId = $_GET['id'];
     

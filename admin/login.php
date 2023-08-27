@@ -131,20 +131,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Please enter both username and password.";
     } else {
         // Assuming you have established a database connection previously
-        $dbHost = 'localhost';
-        $dbUsername = 'root';
-        $dbPassword = '';
-        $dbName = 'mydatabase';
-        $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-        // Check the connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+      include_once('dbcon.php');
 
         // Prepare the query to check if the username and password exist in the database (using prepared statement)
         $query = "SELECT * FROM admins WHERE username = ? AND password = ?";
-        $stmt = $conn->prepare($query);
+        $stmt = $mysqli->prepare($query);
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -160,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           } else {
             // Invalid login
             $query = "SELECT * FROM admins WHERE username = ?";
-            $stmt = $conn->prepare($query);
+            $stmt = $mysqli->prepare($query);
             $stmt->bind_param("s", $username);
             $stmt->execute();
             $result = $stmt->get_result();
@@ -172,9 +163,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        // Close the database connection
+        // Close the database mysqliection
         $stmt->close();
-        $conn->close();
+        $mysqli->close();
     }
 }
 ?>
