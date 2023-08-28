@@ -1,9 +1,17 @@
+<?php
+include_once('header.php');
+// Check if the user name and password are not set in the session
+if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
+    header("Location: login.php"); // Redirect to login.php
+    exit; // Terminate the current script
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Admin Page - ICT Expo</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="style.css">

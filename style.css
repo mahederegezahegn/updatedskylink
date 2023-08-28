@@ -46,64 +46,85 @@ header nav {
     position: sticky;
     top: 0;
     z-index: 100;}
+  
     
-  /* hero section start   */
+  /* end of hero section  */
+
   .hero-section {
-    background-image: url('assets/images/2 Samp;er-01.png');
-    background-color: rgb(2, 0, 36);
-    background-size: contain;
-    background-attachment: fixed;
+    background-image: url('assets/images/Design Bado-01.png');
+    background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    /* background-position: center; */
     background-repeat: no-repeat;
-    min-height: 100vh; /* Change height to min-height for responsiveness */
+    min-height: 70vh;
     display: flex;
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
-    /* padding:0 12rem; */
-    text-align: center;
+    /* text-align: center; */
     color: #fff;
   }
   
-  .parallaxh {
+  .parr {
     display: flex;
-gap: 50%;
-    flex-direction: row;
-    /* margin-top: 2rem; */
-  }
-  .parallax a i{
-    animation: shake 1s infinite;
-  }
-  .parallaxh svg {
-    transform: scale(1.4);
+    flex-direction: column;
+    width:100%;
+    margin-top: 5rem;
+    padding: 0 4rem;
+    align-items: flex-start;
   }
   
-  .hero-title {
-    font-size: 3rem;
-    font-weight: bold;
+  .content {
+    margin-bottom: 3rem;
+    text-align: left;
+    position: relative; /* Added position relative */
+    padding-left: 2rem; /* Added padding for the vertical line */
+  }
+  
+  .content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .51rem;
+    height: 70%;
+    margin-top:1rem;
+    background-color: #fff;
+    box-shadow:4px 4px rgba(254, 254, 254, 0.652);
+  }
 
-    /* font-family: 'Raleway'; */
-    margin-bottom: 1rem;
+  .content h4 {
+    
+    font-family:sans-serif !important;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width:100%;
+    text-align: left;
   }
   
-  .event-dates {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+  
+  .butt-logo {
+    
+    width:100%;
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
   }
   
   .button-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   .button {
-    display: inline-block;
-    padding: 1rem 2rem;
-/* background-image: url('00'); */
-    margin: 1rem;
+    display: inline-flex;
+    padding: 0.8rem 2rem;
+    margin: 0.5rem;
     font-size: 1.2rem;
     text-align: center;
     text-decoration: none;
@@ -114,20 +135,10 @@ gap: 50%;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
-
-  .attend {
-    background-color: #337ab7;
-    width: 200px;
-    border-radius: 20px;
-    font-size: 1.2rem;
-    padding: 1rem;
-    font-weight: bold;
-    /* animation: blink 1s infinite; */
-  }
   
   .watch-live {
     color: #fff;
-    background-color: #ff000000;
+    background-color: #00000000;
   }
   
   .button:hover {
@@ -140,25 +151,37 @@ gap: 50%;
     transform: scale(1);
   }
   
-  .attend:hover {
-    animation: none;
+  .logos img {
+    width: 300px;
+    height: auto;
+    margin: 0 10px;
   }
-
+  
   @media (max-width: 768px) {
-    .parallaxh{
-      margin-top: 0;
-    display: grid;
-    gap: 0rem;
+    .parr {
+      align-items: center;
     }
-   svg{
-    scale: .6;
-   } 
+  
+    .butt-logo {
+      flex-direction: column;
+      
+    }
+  
+    .button-container {
+      margin-top: 2rem;
+    }
+  
+    .button {
+      padding: 0.6rem 1.5rem;
+      margin: 0.3rem;
+      width:100%;
+      font-size: 1rem;
+    }
+  
+    .logos img {
+      width: 250px;
+    }
   }
-  /* end of hero section  */
-
-
-
-
   /* second sectio  */
   
   
@@ -374,7 +397,7 @@ background-color: #fff;
   position: relative;
   height: 30vh;
   overflow: hidden;
-  background-image: url('assets/images/2 Samp;er-01.png');
+  background-image: url('assets/images/3-02-02.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

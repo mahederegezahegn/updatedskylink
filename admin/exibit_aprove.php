@@ -7,21 +7,19 @@ require '../vendor/phpmailer/phpmailer/src/Exception.php';
 require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 
-function sendemail($email)
-{
 
+function sendemail($email,$name,$token){
     try {
         $mail = new PHPMailer(true);
-
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'mail.direinttechexpo.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'mahederegezaheng@gmail.com';
-        $mail->Password = 'idozelnmzyvhhavw';
+        $mail->Username = 'info@direinttechexpo.com';
+        $mail->Password = 'Dire@Expo_2024';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
-        $mail->setFrom('mahederegezaheng@gmail.com');
+        $mail->setFrom('info@direinttechexpo.com');
 
         $mail->addAddress('mahederegezaheng@gmail.com');
         $mail->isHTML(true);
@@ -29,94 +27,60 @@ function sendemail($email)
         $email_template = "
         <html>
         <head>
-            <style>
-                body {
-                    font-family: 'Arial', sans-serif;
-                    background-color: #f1f1f1;
-                    padding: 20px;
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-                h2 {
-                    color: #333333;
-                    margin-top: 0;
-                    margin-bottom: 20px;
-                }
-                h5 {
-                    color: #666666;
-                }
-                a {
-                    text-decoration: none;
-                }
-                .button {
-                    display: inline-block;
-                    background-color: #4CAF50;
-                    color: #ffffff;
-                    text-decoration: none;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    transition: background-color 0.3s ease;
-                }
-                .button:hover {
-                    background-color: #45a049;
-                }
-                .email-container {
-                    background-color: #ffffff;
-                    padding: 30px;
-                    border-radius: 5px;
-                    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-                }
-                .email-container p {
-                    color: #555555;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    margin-bottom: 20px;
-                }
-                .email-container p:last-child {
-                    margin-bottom: 0;
-                }
-                .email-container .header {
-                    color: #333333;
-                    font-size: 24px;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-                .email-container .sub-header {
-                    color: #666666;
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-bottom: 20px;
-                }
-                .email-container .cta-button {
-                    text-align: center;
-                    margin-top: 30px;
-                }
-                .email-container .cta-button .button {
-                    display: inline-block;
-                    padding: 12px 30px;
-                    font-size: 16px;
-                    transition: background-color 0.3s ease;
-                }
-                .email-container .cta-button .button:hover {
-                    background-color: #45a049;
-                }
-                @media only screen and (max-width: 480px) {
-                    body {
-                        padding: 10px;
-                    }
-                }
-            </style>
-        </head>
-        <body>
-            <div class='email-container'>
-                <h2 class='header'>Congratulations! Your company has been approved for ICT Expo</h2>
-                <h5 class='sub-header'>Verify your email to complete the registration process</h5>
-                <p>
-                    Thank you for registering with ICT Expo. We are pleased to inform you that your company's exhibition application has been approved. Your booth has been confirmed for the upcoming event.
-                </p>
-               
-            </div>
-        </body>
+        <style>
+        /* Put your CSS styles here */
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f1f1f1;
+          padding: 20px;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+        h2 {
+          color: #333333;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        p {
+          color: #555555;
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+        a {
+          color: #4CAF50;
+          text-decoration: none;
+        }
+        .button {
+          display: inline-block;
+          background-color: #4CAF50;
+          color: #ffffff;
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+        }
+        .button:hover {
+          background-color: #45a049;
+        }
+      </style>
+    </head>
+    <body>
+      <h2>Congratulations! Your company has been approved for ICT Expo</h2>
+      <p>
+        Thank you for registering with ICT Expo. We are pleased to inform you that your company's exhibition application has been approved. Your booth has been confirmed for the upcoming event.
+      </p>
+      <p>
+        To complete the registration process, please verify your email by clicking the following link:
+      </p>
+      <p>
+    <button> <a href=''>Verify Email</a></button>
+      </p>
+      <p>
+        If you have any questions or need further assistance, please don't hesitate to contact us. We look forward to seeing you at the event!
+      </p>
+      <p>Best regards,<br>ICT Expo Team</p>
+    </body>
         </html>
     ";
 
@@ -131,7 +95,7 @@ function sendemail($email)
             throw new Exception("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
         }
     } catch (Exception $e) {
-        echo "<script>alert('Message could not be sent. Mailer Error: " . $e->getMessage() . "'); window.location.href = 'approve.php';</script>";
+        echo "<script>alert('Message could not be sent. Mailer Error: " . $e->getMessage() . "');";
     }
 }
 

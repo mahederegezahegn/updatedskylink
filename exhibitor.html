@@ -6,7 +6,9 @@
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Nanum+Myeongjo:wght@700&family=Playfair+Display+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
-  <title>Your Website</title>
+      <title>Dire International Technology Expo</title>
+        
+        
 </head>
 <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="form.css">
@@ -120,7 +122,7 @@
         <div class="conainer w-50 py-8">
             <h1 class="text-3xl font-bold mb-8">Registration Form</h1>
     
-            <form action="submit.php" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+            <form action="submit.php" method="POST" id="verificationForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
                
                 <div class="layout">
                     <div><div class="one">
@@ -252,5 +254,94 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Form validation code
+document.getElementById('verificationForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
 
+  // Validate form fields
+  var companyName = document.getElementById('companyName').value.trim();
+  var displayName = document.getElementById('displayName').value.trim();
+  var section = document.getElementById('section').value;
+  var mobilePhone = document.getElementById('mobilePhone').value.trim();
+  var officePhone = document.getElementById('officePhone').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var website = document.getElementById('website').value.trim();
+
+  // Perform validation checks
+  var isValid = true;
+
+  if (companyName === '') {
+    isValid = false;
+    alert('Please enter the Company/Organization Name.');
+  }
+
+  if (displayName === '') {
+    isValid = false;
+    alert('Please enter the Display Name for Booth.');
+  }
+
+  if (section === '') {
+    isValid = false;
+    alert('Please select the Section/Service.');
+  }
+
+  if (mobilePhone === '') {
+    isValid = false;
+    alert('Please enter the Mobile Phone.');
+  } else if (!validatePhoneNumber(mobilePhone)) {
+    isValid = false;
+    alert('Please enter a valid Mobile Phone number.');
+  }
+
+  if (officePhone === '') {
+    isValid = false;
+    alert('Please enter the Office Phone.');
+  } else if (!validatePhoneNumber(officePhone)) {
+    isValid = false;
+    alert('Please enter a valid Office Phone number.');
+  }
+
+  if (email === '') {
+    isValid = false;
+    alert('Please enter the Email.');
+  } else if (!validateEmail(email)) {
+    isValid = false;
+    alert('Please enter a valid Email address.');
+  }
+
+  if (website !== '' && !validateWebsite(website)) {
+    isValid = false;
+    alert('Please enter a valid Website URL.');
+  }
+
+  // Add validation checks for other fields
+
+  // If all fields are valid, submit the form
+  if (isValid) {
+    document.getElementById('verificationForm').submit();
+  }
+});
+
+// Validate phone number
+function validatePhoneNumber(phoneNumber) {
+  // Phone number validation logic
+  var phoneNumberRegex = /^\d{10}$/; // Example: 1234567890 (10 digits)
+  return phoneNumberRegex.test(phoneNumber);
+}
+
+// Validate email
+function validateEmail(email) {
+  // Email validation logic
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Validate website URL
+function validateWebsite(website) {
+  // Website URL validation logic
+  var websiteRegex = /^(http|https):\/\/[^ "]+$/;
+  return websiteRegex.test(website);
+}
+</script>
 </html>

@@ -1,3 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verification Success</title>
+  <style>
+    /* Put your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333333;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #555555;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+
 <?php
 
 // Assuming the token is passed as a query parameter in the URL
@@ -19,12 +68,38 @@ if (isset($_GET['token'])) {
 
         // Check if any rows were affected by the update
         if ($stmt->rowCount() > 0) {
-            echo "Email verified successfully!";
-            header('location:index.html');
+          
+            ?>
+              <div class="container">
+    <h2>Congratulations! Your Email has been Verified</h2>
+    <p>
+      Thank you for verifying your email. Your email has been successfully verified, and your account is now active.
+    </p>
+    <p>
+      You can now enjoy all the benefits and features of our platform. If you have any questions or need further assistance, please don't hesitate to contact us.
+    </p>
+    <p>
+      <strong>Get started now!</strong>
+    </p>
+    <p>
+      <a class="button" href="index.html">Go to Dashboard</a>
+    </p>
+  </div>
+            <?php
         } else {
-            echo "Invalid token or email already verified.";
-        }
+            ?>
+  <div class="container">
+    <h2>You have been verified already </h2>
+  </div>
+
+             <?php
+             }
     } catch (PDOException $e) {
         echo "Error updating verified status: " . $e->getMessage();
     }
 }
+
+
+?>
+</body>
+</html>

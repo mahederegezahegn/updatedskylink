@@ -1,3 +1,13 @@
+<?php
+include_once('header.php');
+// Check if the user name and password are not set in the session
+if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
+    header("Location: login.php"); // Redirect to login.php
+    exit; // Terminate the current script
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
