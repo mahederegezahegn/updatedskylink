@@ -40,7 +40,7 @@ header nav {
     background-color: rgb(255, 255
     , 255
     );
-    padding: 20px;
+    padding:10px 20px;
     font-family: "Raleway";
     font-weight: bolder;
     position: sticky;
@@ -49,64 +49,58 @@ header nav {
   
     
   /* end of hero section  */
-
   .hero-section {
     background-image: url('assets/images/Design Bado-01.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* background-position: center; */
     background-repeat: no-repeat;
     min-height: 70vh;
     display: flex;
     justify-content: left;
     align-items: center;
-    /* text-align: center; */
     color: #fff;
   }
   
   .parr {
     display: flex;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     margin-top: 5rem;
     padding: 0 4rem;
     align-items: flex-start;
   }
   
-  .content {
+  .parr .content {
     margin-bottom: 3rem;
     text-align: left;
-    position: relative; /* Added position relative */
-    padding-left: 2rem; /* Added padding for the vertical line */
+    position: relative;
+    padding-left: 2rem;
   }
   
-  .content:before {
+  .parr .content:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: .51rem;
     height: 70%;
-    margin-top:1rem;
+    margin-top: 1rem;
     background-color: #fff;
-    box-shadow:4px 4px rgba(254, 254, 254, 0.652);
+    box-shadow: 4px 4px rgba(254, 254, 254, 0.652);
   }
-
-  .content h4 {
-    
-    font-family:sans-serif !important;
+  
+  .parr .content h4 {
+    font-family: sans-serif !important;
     font-size: 2.5rem;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    width:100%;
+    width: 100%;
     text-align: left;
   }
   
-  
   .butt-logo {
-    
-    width:100%;
+    width: 100%;
     margin-top: 7rem;
     display: flex;
     flex-direction: row;
@@ -160,21 +154,18 @@ header nav {
   @media (max-width: 768px) {
     .parr {
       align-items: center;
+      padding: 1rem;
     }
   
     .butt-logo {
       flex-direction: column;
-      
-    }
-  
-    .button-container {
-      margin-top: 2rem;
+      align-items: center;
     }
   
     .button {
       padding: 0.6rem 1.5rem;
       margin: 0.3rem;
-      width:100%;
+      width: 60%;
       font-size: 1rem;
     }
   
@@ -182,110 +173,128 @@ header nav {
       width: 250px;
     }
   }
-  /* second sectio  */
   
+  /* Second section */
   
   .landing-section {
-  background-image: #f5f5f5;
-  padding: 50px 0;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.logo-container img {
-  display: block;
-  margin: 0 auto 20px;
-}
-
-.text-container {
-  visibility: visible; /* Hide the text container initially */
-  /* opacity: 0; */
-  transition: opacity 0.5s, transform 0.5s;
-}
-#showMoreBtn{
-  background-color: #0056b3;
-  border-radius: 2rem;
-  position: relative;
-  top: -2rem;
-  padding: .5rem 1rem;
-  color: white;
-}
-
-.text-container h2 {
-  font-size: 32px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.text-container p {
-  /* font-size: 15px; */
-  /* font-family: 'Raleway' !important; */
-  font-size: 1.1em;
+    background-image: #f5f5f5;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .logo-container img {
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .text-container {
+    visibility: visible;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  #showMoreBtn {
+    background-color: #0056b3;
+    border-radius: 2rem;
+    position: relative;
+    top: -2rem;
+    padding: 0.5rem 1rem;
+    color: white;
+  }
+  
+  .text-container h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .text-container p {
+    font-size: 1.1em;
     font-weight: lighter;
-  line-height: 1.5rem;
-  color: #000 !important;
-  text-align: start;
-  margin-left: 12px;
-  margin-bottom: 40px;
-}
-
-.cta-container {
-  margin-bottom: 50px;
-}
-
-.cta-container h3 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
+    line-height: 1.5rem;
+    color: #000 !important;
+    text-align: start;
+    margin-left: 12px;
+    margin-bottom: 40px;
   }
-  50% {
-    transform: translateY(-10px);
+  
+  .cta-container {
+    margin-bottom: 50px;
   }
-  100% {
-    transform: translateY(0);
+  
+  .cta-container h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
   }
-}
-.download-button i{
-  animation: bounce 1s linear infinite; 
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
 
-}
-.scroll-to-top {
-  position: fixed;
-  bottom: 50px;
-  /* left: 20px; */
-  right: 5rem;
-  float: right;
-  z-index: 9999;
-  background-color: #1321e2ce;
-  color: #fff;
-  padding: 10px ;
-  border-radius: 51%;
-  cursor: pointer;
-}
-.download-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #337ab7;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.download-button:hover {
-  background-color: #23527c;
-}
-
-
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .download-button i {
+    animation: bounce 1s linear infinite;
+  }
+  
+  .scroll-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 5rem;
+    float: right;
+    z-index: 9999;
+    background-color: #1321e2ce;
+    color: #fff;
+    padding: 10px;
+    border-radius: 51%;
+    cursor: pointer;
+  }
+  
+  .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #337ab7;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .download-button:hover {
+    background-color: #23527c;
+  }
+  
+  /* Responsive adjustments for the second section */
+  @media (max-width: 768px) {
+    .landing-section {
+      padding: 30px 0;
+    }
+  
+    .container {
+      max-width: 90%;
+    }
+  
+    .text-container p {
+      font-size: 1em;
+      margin-left: 0;
+    }
+  
+    .scroll-to-top {
+      right: 1rem;
+    }
+  }
   /* information section end  */
 
   /* card section  */

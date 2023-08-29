@@ -11,8 +11,8 @@
   
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 
-      <title>Dire International Technology Expo</title>
-        
+      <title>Dire International Technology Expo</title>     <link rel="icon" type="image/png" href="assets/images/Ict expo final .jpg">
+               
         
 </head>
 <style>
