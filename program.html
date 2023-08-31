@@ -1,28 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Nanum+Myeongjo:wght@700&family=Playfair+Display+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="about.css">
-<link rel="stylesheet" href="style.css">
-<script src="js.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Nanum+Myeongjo:wght@700&family=Playfair+Display+SC&family=Raleway:wght@100&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-      <title>Dire International Technology Expo</title>     <link rel="icon" type="image/png" href="assets/images/Ict expo final .jpg">
-               
-        
+  <title>Dire International Technology Expo</title>
+  <link rel="icon" type="image/png" href="assets/images/Ict expo final .png">
+  <style>
+    .expo-section {
+      padding: 4rem 0;
+      background-color: #f9f9f9;
+    }
+
+    .expo-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .expo-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .download-button {
+      margin-top: 2rem;
+    }
+
+
+    .program-highlights {
+      list-style-type: none;
+      margin-top: 2.5rem;
+      text-align: start;
+      padding-left: 0;
+    }
+
+    .program-highlights li {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    .ms{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .program-highlights i {
+      color: #007bff;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .expo-section .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .expo-section .row {
+        width: 100%;
+      }
+
+      .expo-section .col-12 col-lg-6 {
+        width: 100%;
+      }
+    }
+    .text-start {
+    text-align: start;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  .p-2 {
+    padding: 2rem;
+  }
+
+  .text-black {
+    color: #000;
+  }
+
+  .text-start ul {
+    list-style: none;
+    display: block;
+    margin-left: 0;
+    padding-left: 2rem;
+  }
+
+  .text-start li {
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+
+  .text-start h5 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    .text-start {
+      font-size: 0.9rem;
+    }
+
+    .p-2 {
+      padding: 1rem;
+    }
+  }
+  </style>
 </head>
+
 <body>
 
   <!-- Header -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
-           <a class="navbar-brand" href="index.html">
-          <img  class="dark-logo" alt="Skylink Technologies" width="210" height="70px" src="assets/images/logo image-01.png" /></a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">
+          <img class="dark-logo" alt="Skylink Technologies" width="210" height="120px"
+            src="assets/images/Ict expo final .png" /></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,7 +142,7 @@
               <a class="nav-link  " href="index.html">Home</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link "  href="about.html">About</a>
+              <a class="nav-link " href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="program.html">Program</a>
@@ -43,69 +154,83 @@
               <a class="nav-link" href="attend.html">Attend</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="news.php">News</a>
+              <a class="nav-link" href="what_new.php">News</a>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">sponsors</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   </header>
-
   <button class="scroll-to-top" onclick="scrollToTop()">
-   
+
     <i class="fas fa-arrow-up"></i></button>
-    
-    <div class="program">
-      <h1 class="text-center">ETHIOPIA INNOVATE WEEK PROGRAM</h1>
-   
-    <section class="program-section" style="margin: 0 1rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; border-radius: 1rem; ">
-      
-    
-        <section class="txt">
-          <div class="flex-row" style="justify-content: space-between; align-items: center;">
-           <img src="assets/images/Design Bado-01.png" style="width: 250px; height: 80px; padding: 0;
-            margin: 0;" />
-          <h4 class="flex-row">Download the Program
-            <div class="download-button">
-              <a href="#" class="text-white">Download</a> <i class="fas fa-arrow-down"></i>
+
+  <div class="program">
+
+    <section class="program-section" style="margin: 0 1rem;">
+
+      <section class="expo-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <img src="assets/images/Ict expo final .png" alt="ICT Expo" class="img-fluid">
+              <div class="download-button">
+                <a href="#" class="btn text-white" >Download Exhibitor Kit <i class="fas fa-arrow-down" style="color: white;"></i> </a>
+              </div>
             </div>
-          </h4>
+            <div class="col-12 col-lg-6">
+              <h2>Dire ICT Expo Ethiopia 2024</h2>
+              <p>Showcase your innovations at the premier technology event of the year!</p>
+             
+              <ul class="program-highlights">
+                <li><i class="fas fa-check"></i>Part of Technology Week (May 14-18) along with StartupEthiopia, STI Award and Conference</li>
+                <li><i class="fas fa-check"></i>Opportunity to network with over 5,000 attendees</li>
+                <li><i class="fas fa-check"></i>Exhibit the latest ICT solutions and technologies</li>
+                <li><i class="fas fa-check"></i>Meet potential clients, partners and talent</li>
+                <li><i class="fas fa-check"></i>Promote your brand to key decision makers</li>
+              </ul>
+            </div>
           </div>
-          <p>ICT Expo Ethiopia 2020 constitutes part of a series of events taking place from May 14 until May 18, all of which make up what is termed as the “Technology Week”. The other events taking place during that week include StartupEthiopia, STI Award, and a Conference.</p>
-        </section>
-     
+        </div>
+      </section>
+
     </section>
- <div class="container">
-  <h4 class="text-center mt-5">ICT EXPO ETHIOPIA</h4>
- <div class="text text-start">
-  <p>ICT EXPO ETHIOPIA is Ethiopia’s largest and most extensive ICT Exhibition, Panel discussions, and Summit. <br>
+    <div class="container">
+      <h4 class="text-center mt-5">Dire ICT EXPO ETHIOPIA</h4>
+      <div class="text text-start">
+        <p>
+          The Dire International Tech Expo is a prestigious technology event organized by the Dire Dawa city
+          administration in Ethiopia in collaboration with Skylink Technologies, an ICT company. With the theme “Idea to
+          Reality,” the expo aims to showcase latest technological innovations and solutions to bridge the digital
+          divide. It covers sectors like ICT, broadcasting, environment, finance, AI and robotics. Skylink Technologies
+          plays an instrumental role in organizing the expo by providing technology solutions to businesses, education
+          and government. The expo envisions transforming ideas into reality by exhibiting cutting-edge technologies and
+          enabling networking. It benefits both businesses and non-profits in leveraging technology for progress. The
+          expo is a guide for professionally managing the event by capturing its informative, descriptive and innovative
+          nature.</p>
+        <img src="assets/tech company.gif" style="width: 350px;" />
 
-    ICT Expo Ethiopia is where established technology service vendors, private and public sector decision-makers, integrators, and users of ICT technology for business or public good as well as disruptive startups with unique solutions come together to create important networks and build valuable partnerships.
-    
-    From enterprise solutions to large telecom operators, ICT Expo Ethiopia brings the latest technology innovations to benefit organizations operating or planning to engage in the expanding Ethiopian market. The Expo serves as a catalyst for collaboration and cooperation between foreign and local technology companies and a multitude of partners in the ICT ecosystems.
-    
-    The event combines unrivaled conference content with a major exhibition and a well-crafted networking opportunity. Besides the panels, the Expo comprises of Business to Business meetings, Business to Customer meetings, Government to Government meetings, and Government to Business meetings.
-    
-    As Africa’s diplomatic capital and a rising conference tourism destination enchanting Addis Ababa provide the appropriate setting for business travelers and those curious to explore the opportunities of the wider Ethiopian market.
-    
-    Daily detailed program during the Expo coming here soon for the following days.</p>
-    <img src="assets/tech company.gif" style="width: 350px;" />
-     
- </div>
-     
+      </div>
 
- </div>
- <div  style="margin: 0 1rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; border-radius: 1rem;">
-  <h1 class="text-center">Get your Schedule</h1>
-  <div class="dis" style=" height: auto; display: flex; justify-content: space-around; align-items: center; padding: 2rem;">
-    <img src="https://www.ictexpoethiopia.com/wp-content/uploads/2017/02/Screen-Shot-2019-04-04-at-5.12.37-PM.png" width="600px" height="320px" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
-    <img src="assets/Spreadsheets-amico.png" width="500px" height="320px" style="height: auto; max-width: 100%;">
-  </div>  
-</div>
+
+    </div>
+    <div style="margin: 0 1rem;">
+      <h1 class="text-center">Get your Schedule</h1>
+      <div class="dis"
+        style=" height: auto; display: flex; justify-content: space-around; align-items: center; padding: 2rem;">
+        <img src="https://www.ictexpoethiopia.com/wp-content/uploads/2017/02/Screen-Shot-2019-04-04-at-5.12.37-PM.png"
+          width="600px" height="320px" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+        <img src="assets/Spreadsheets-amico.png" width="500px" height="320px" style="height: auto; max-width: 100%;">
+      </div>
+    </div>
     </section>
 
 
@@ -113,87 +238,123 @@
 
 
 
-<section class="txt">
-  <h1 class="text-center">Startup Ethiopia</h4>
-  <img src="http://www.ictexpoethiopia.com/wp-content/uploads/2017/02/StartupEthiopia.png" width="300px" style="max-width: 100%;">
-  <div class="text-start p-2">
-    <p>
+    <section class="txt">
+     
+        <div class="ms">
+          <img src="assets/images/Ict expo final .png" width="300px" style="max-width: 100%;">
+          <h1 class="text-center align-center">Dire ICT EXPO</h4>
+
+        </div>
+      
+        
+<div class="text-start p-2">
+  <p>
+  <div class="flex-row flex-wrap">
       <ul class="text-start">
-        <li class="download-button text-black">Identify and showcase dynamic startups from all over Ethiopia</li>
-        <li class="download-button text-black">Position Ethiopia as an emerging startup ecosystem</li>
-        <li class="download-button text-black">Create a platform for startups to connect to investors</li>
-        <li class="download-button text-black">Raise venture capital and impact investor interest in Ethiopian startups</li>
-      </ul>
-      <h5 class="text-start">StartupEthiopia Organization and Elements</h5>
-      <p>
-        StartupEthiopia aims to become a nationally and globally recognized annual event, growing its participation in terms of highly qualified startups and investors starting with 100 semi-finalist startups, 10 finalists, and 25 investors and a total attendance of 1000 in 2020.
-      </p>
-      <p>
-        StartupEthiopia is organized through a public-private partnership between the Government of Ethiopia, represented by the Ministry of Innovation and Technology, and blueMoon, a private incubator, and seed investment company. Moreover, a host of partners would be engaged, including various Ministries and agencies, regional bureaus, universities, industry associations, peer incubators and accelerators, media and event partners, corporate sponsors, youth groups, and civic organizations, among others. In addition, a group of 100 volunteer youth ambassadors would be engaged for the running of the 2-day event.
-      </p>
-      <p>
-        StartupEthiopia 2020 will be held as an event of Ethiopia Tech Week, alongside ICT-Expo, in the Millennium Hall, on May 16-17.
-      </p>
-    </p>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Identify and showcase dynamic startups from all over Ethiopia</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Position Ethiopia as an emerging startup ecosystem</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Create a platform for startups to connect to investors</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Raise venture capital and impact investor interest in Ethiopian startups</li>
+    </ul>
+    <ul>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Stand in a large crowd of your target market and have a face-to-face discussion with them.</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Attract potential clients and generate sales.</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Enhance your public relations, networking, and company profile.</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Build long-term relationships.</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Have your company name and products/services posted in the technology bazaar catalog.</li>
+      <li class="text-black"><i class="fas fa-check" style="color:#007bff; font-size: 25px; margin-right: 5px;"></i>Reinforce relationships with existing buyers and partners.</li>
+    </ul>
   </div>
-</section>
-<section class="txt">
-  <h3 class="text-center">Paperless Day</h4>
-   <p>One of the Technology Week initiatives is Paperless Day. So you all are invited to be part of this initiative and try to avoid using paper by promoting Technology.
+    <h5 class="text-start">StartupEthiopia Organization and Elements</h5>
+    <p>
+      Skylink Technologies is an Information and Communication Technology (ICT) company established in 2021 to provide innovative and cost-effective technology solutions to businesses, educational institutions and government organizations. Led by a team of IT professionals with over 18 years of experience, Skylink Technologies aims to help clients streamline their operations, increase productivity and achieve their goals. Through a commitment to quality, customer satisfaction and technological excellence, Skylink Technologies has become a trusted ICT partner.
 
-    The paperless day will be announced soon.</p>
-</section>
-<section class="txt">
-  <h4 class="">Science, Technology and Innovation (STI) AWARDS</h4>
-   <p>
-    <img src="http://www.ictexpoethiopia.com/wp-content/uploads/2019/07/STI-Awards-copy-2.jpg">
-   </p>
-</section>
+Skylink Technologies offers a range of IT services to support organizations of all sizes in various industries. 
+
+</p>
+<p>However, the company’s current profile lacks specific details about its story, vision, mission, values, team, services, achievements, testimonials, etc. that would help to establish credibility and connect with the audience. The content can be improved significantly by enhancing coherence, grammar, punctuation and language for better flow and readability. Adding visual and multimedia elements together with a clear structure of introduction, key message, supporting ideas and conclusion would also make the profile more engaging and impactful.
+
+With a compelling vision and experienced team, Skylink Technologies has the potential for growth and success as an ICT solutions provider. By improving its online presence and brand messaging through a well-crafted company profile, Skylink Technologies can reach new clients and partners, build trust in its services and become a leader in the technology space of Ethiopia. An updated digital profile and content strategy may help Skylink Technologies gain a competitive advantage for sustainable growth in the long run.
+    </p>
+    <p>
+      StartupEthiopia 2024 will be held as an event of Ethiopia Tech Week, alongside ICT-Expo, in the Millennium
+      Hall, on May 16-17.
+    </p>
+  
+  </p>
+  
 </div>
-</section>
+
+    </section>
 
 
 
-</div>
-<section class="contact-section">
-  <div class="container">
-    <div class="row justify-content-evenly">
-      <div class="col-md-4 text-center">
-        <img src="assets/Date picker.gif" alt="Date & Venue Illustration" class="illustration">
-        <h3>Date & Venue</h3>
-        <p>Jan 24 - Jan 27, 2024</p>
-        <p>Addis Ababa, Ethiopia</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <img src="assets/Get in touch.gif" alt="Get in Touch Illustration" class="illustration">
-        <h3>Get in Touch</h3>
-        <p>Email: info@direinttechexpo.com<br>
-          Phone: +251911027667</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <img src="assets/Share link.gif" alt="Quick Links Illustration" class="illustration">
-        <h3>Quick Links</h3>
-        <ul class="list-unstyled">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="program.html">Program</a></li>
-          <li><a href="exhibitors.html">Exhibitors</a></li>
-        </ul>
-        <div class="follow-us">
-          <h4>Follow Us</h4>
-          <ul class="social-media-icons unstyled">
-            <li><a href="https://www.facebook.com/profile.php?id=61550867035589&is_tour_completed=true"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+
+
+
+    
+
+
+    <section class="txt">
+      <h3 class="text-center">Paperless Day</h4>
+        <p>One of the Technology Week initiatives is Paperless Day. So you all are invited to be part of this initiative
+          and try to avoid using paper by promoting Technology.
+
+          The paperless day will be announced soon.</p>
+    </section>
+    <section class="txt">
+      <h4 class="">Science, Technology and Innovation (STI) AWARDS</h4>
+      <p>
+        <img src="http://www.ictexpoethiopia.com/wp-content/uploads/2019/07/STI-Awards-copy-2.jpg" width="100%">
+      </p>
+    </section>
+  </div>
+  </section>
+
+
+
+  </div>
+  <section class="contact-section">
+    <div class="container">
+      <div class="row justify-content-evenly">
+        <div class="col-md-4 text-center">
+          <img src="assets/Date picker.gif" alt="Date & Venue Illustration" class="illustration">
+          <h3>Date & Venue</h3>
+          <p>Jan 24 - Jan 27, 2024</p>
+          <p>Addis Ababa, Ethiopia</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="assets/Get in touch.gif" alt="Get in Touch Illustration" class="illustration">
+          <h3>Get in Touch</h3>
+          <p>Email: info@direinttechexpo.com<br>
+            Phone: +251911027667</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="assets/Share link.gif" alt="Quick Links Illustration" class="illustration">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="exhibitors.html">Exhibitors</a></li>
           </ul>
+          <div class="follow-us">
+            <h4>Follow Us</h4>
+            <ul class="social-media-icons unstyled">
+              <li><a href="https://www.facebook.com/profile.php?id=61550867035589&is_tour_completed=true"><i
+                    class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

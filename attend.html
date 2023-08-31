@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Nanum+Myeongjo:wght@700&family=Playfair+Display+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="about.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Nanum+Myeongjo:wght@700&family=Playfair+Display+SC&family=Raleway:wght@100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-      
-      <title>Dire International Technology Expo</title>     <link rel="icon" type="image/png" href="assets/images/Ict expo final .jpg">
-               
-        
+
+  <title>Dire International Technology Expo</title>
+  <link rel="icon" type="image/png" href="assets/images/Dire Ict expo final .png">
+
+
 </head>
 <style>
+  .benefits {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .benefits h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .benefit-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .benefit-item i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .benefit-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .benefit-item p {
+    font-size: 14px;
+    color: #777;
+  }
+
   .section {
     display: flex;
     flex-wrap: wrap;
@@ -26,14 +71,16 @@
   }
 
   .card {
-    flex: 0 1 calc(25% - 20px); /* Adjust the width to 4 columns with 20px gap */
+    flex: 0 1 calc(25% - 20px);
+    /* Adjust the width to 4 columns with 20px gap */
     background-color: #f8f8f8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    transition: ease-in-out .5s ;
+    transition: ease-in-out .5s;
   }
-  .card:hover{
+
+  .card:hover {
     background-color: #888;
     z-index: 99;
     color: white;
@@ -62,7 +109,8 @@
 
   @media (max-width: 768px) {
     .card {
-      flex: 0 1 calc(50% - 20px); /* Adjust the width to 2 columns with 20px gap for smaller screens */
+      flex: 0 1 calc(50% - 20px);
+      /* Adjust the width to 2 columns with 20px gap for smaller screens */
     }
 
     .card img {
@@ -78,152 +126,310 @@
       font-size: 12px;
     }
   }
+
   @keyframes formFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.form-container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  animation: formFadeIn 1s linear;
-}
 
-.txt h4 {
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid black;
-}
-
-.form-container .one {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-@media (max-width: 768px) {
   .form-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    animation: formFadeIn 1s linear;
+  }
+
+  .txt h4 {
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-group input {
     width: 100%;
-    padding: 0 1rem;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
   }
 
   .form-container .one {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width: 80%;
-    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .form-container {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .form-container .one {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .submit-btn {
+      width: 100%;
+    }
+
+    .form-group .submit-btn {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
   }
 
   .submit-btn {
-    width: 100%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
-  .form-group .submit-btn {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+
+  .submit-btn:hover {
+    background-color: #5469dd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
-}
 
-.submit-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.submit-btn:hover {
-  background-color: #5469dd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
   swiper-container {
-       width: 400px;
-       height: 340px;
-       float: left;
-       margin-left: 1rem;
-     }
- 
-     swiper-slide {width: 400px;
+    width: 400px;
+    height: 340px;
+    float: left;
+    margin-left: 1rem;
+  }
 
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       border-radius: 18px;
-       font-size: 22px;
-       font-weight: bold;
-       color: #fff;
-     }
- 
-     swiper-slide:nth-child(1n) {
-       background-image: url('assets/Date picker.gif');
- background-size: cover;
-       background-position: center;
- 
-     }
- 
-     swiper-slide:nth-child(2n) {
-         background-image: url('assets/Digital lifestyle.gif');
- background-size: cover;
-       background-position: center;
-   }
- 
-     swiper-slide:nth-child(3n) {
-         background-image: url('assets/Get in touch.gif');
- background-size: cover;
-       background-position: center;
-     }
-     .row swiper-container{
-      border: 1px solid white;
-     }
+  swiper-slide {
+    width: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  swiper-slide:nth-child(1n) {
+    background-image: url('assets/Date picker.gif');
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  swiper-slide:nth-child(2n) {
+    background-image: url('assets/Digital lifestyle.gif');
+    background-size: cover;
+    background-position: center;
+  }
+
+  swiper-slide:nth-child(3n) {
+    background-image: url('assets/Get in touch.gif');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .row swiper-container {
+    border: 1px solid white;
+  }
+
+
+  .competitions {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .competitions .container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  .competitions-list {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1rem;
+  }
+
+  .competition-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin-right: 1rem;
+    min-width: 300px;
+    padding: 1rem;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .competitions-list .competition-card:first-child {
+    margin-left: 1rem;
+  }
+
+  .competition-card i {
+    background: #03a9f4;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+    padding: 1rem;
+  }
+
+  .competition-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+
+  .competition-card p {
+    font-size: 1rem;
+    color: #777;
+    white-space: normal;
+  }
+
+  .competition-card a {
+    background: #03a9f4;
+    border-radius: 0.5rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .competition-card a:hover {
+    background: #0288d1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+
+    .competitions-list {
+      padding: 1rem 0;
+      overflow-x: scroll;
+    }
+
+    .competition-card {
+      margin-right: 0.5rem;
+      width: 100%;
+      height: 400px;
+      text-align: center;
+      flex: 0 0 auto;
+    }
+  }
+
+  .visitor-benefits-summary {
+      background-color: #f7f7f7;
+      padding: 40px 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .flex-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .benefit-points {
+      text-align: start;
+      list-style: none;
+      padding: 0;
+      margin: 0 20px;
+    }
+
+    .benefit-points li {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .benefit-points i {
+      margin-right: 10px;
+      color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .flex-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .benefit-points {
+        margin-bottom: 20px;
+      }
+    }
 </style>
-</style>
+
 <body>
 
-  <!-- Header -->
-  <button class="scroll-to-top" onclick="scrollToTop()">
-   
-    <i class="fas fa-arrow-up"></i></button>
+
   <header>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
            <a class="navbar-brand" href="index.html">
-          <img  class="dark-logo" alt="Skylink Technologies" width="210" height="70px" src="assets/images/logo image-01.png" /></a>
+            <img  class="dark-logo" alt="Skylink Technologies" width="210" height="120px" src="assets/images/Ict expo final .png" /></a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -240,253 +446,341 @@
               <a class="nav-link" href="program.html">Program</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="exhibitors.html">Exhibitors</a>
+              <a class="nav-link " href="exhibitors.html">Exhibitors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="attend.html">Attend</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="news.php">News</a>
+              <a class="nav-link" href="what_new.php">News</a>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">sponsors</a>
+            </li>     
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   </header>
 
 
 
-  <div class="about-container">
+  <section class="visitor-benefits-summary">
+    <div class="container">
+      <h2>Key Benefits of Attending Events</h2>
+      <p>There are many reasons why visitors attend events. Primarily, events provide an opportunity to learn, network, and gain valuable exposure. By attending events, you can discover new ideas, meet like-minded people, and advance your career or business.</p>
+      <div class="flex-row">
+        <ul class="benefit-points">
+          <li><i class="fas fa-lightbulb"></i> Gain new knowledge and expertise</li>
+          <li><i class="fas fa-chart-line"></i> Stay up-to-date with trends and innovations</li>
+          <li><i class="fas fa-handshake"></i> Networking opportunities</li>
+          <li><i class="fas fa-users"></i> Meet industry leaders and experts</li>
+          <li><i class="fas fa-comments"></i> Social interaction and make new connections</li>
+          <li><i class="fas fa-laptop"></i> Get hands-on experience with new technologies</li>
+        </ul>
+        <ul class="benefit-points">
+          <li><i class="fas fa-briefcase"></i> Business development and career advancement</li>
+          <li><i class="fas fa-search"></i> Engage with exhibitors and discover new solutions</li>
+          <li><i class="fas fa-lightbulb"></i> Find inspiration and motivation</li>
+          <li><i class="fas fa-users"></i> Gain diverse perspectives</li>
+          <li><i class="fas fa-book"></i> Gather useful resources</li>
+          <li><i class="fas fa-globe"></i> Get exposure to the industry</li>
+                </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="about-container" style="padding: 0 10px">
     <h1>Attend US</h1>
     <div class="row">
-        <div class="col-md-6">
-          <swiper-container class="mySwiper" effect="cards" grab-cursor="true" style="max-width: 70%;">
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-            <swiper-slide>Slide</swiper-slide>
-          </swiper-container>
-    
-  
-        </div>
-        <div class="col-md-6">
-            <p class="text-start">
-                ICT EXPO ETHIOPIA is Ethiopia's largest and most extensive ICT Exhibition, Conference, and Summit.
-            </p>
-            <p class="text-start">
-                ICT Expo Ethiopia is where established technology service vendors, private and public sector decision
-                makers, integrators, and users of ICT technology for business or public good—as well as disruptive
-                startups with unique solutions—come together to create important networks and build valuable
-                partnerships.
-            </p>
-            <p class="text-start">
-                From enterprise solutions to large telecom operators, ICT Expo Ethiopia brings the latest technology
-                innovations to benefit organizations operating or planning to engage in the expanding Ethiopian
-                market. The Expo serves as a catalyst for collaboration and coopetition between foreign and local
-                technology companies and a multitude of partners in the ICT ecosystems.
-            </p>
-            <p class="text-start">
-                The event combines unrivaled conference content with a major exhibition and a well-crafted networking
-                opportunity. As Africa's diplomatic capital—and a rising conference tourism destination—enchanting
-                Addis Ababa provides the appropriate setting for business travelers and those curious to explore the
-                opportunities of the wider Ethiopian market.
-            </p>
-        </div>
+      <div class="col-md-6">
+        <swiper-container class="mySwiper" effect="cards" grab-cursor="true" style="max-width: 70%;">
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+          <swiper-slide>Slide</swiper-slide>
+        </swiper-container>
+
+
+      </div>
+      <div class="col-md-6">
+        <p class="text-start">
+          Dire ICT EXPO ETHIOPIA is Ethiopia's largest and most extensive ICT Exhibition, Conference, and Summit.
+        </p>
+        <p class="text-start">
+          Dire ICT Expo Ethiopia is where established technology service vendors, private and public sector decision makers, integrators, and users of ICT technology for business or public good—as well as disruptive startups with unique solutions—come together to create important networks and build valuable partnerships.</p> <p>From enterprise solutions to large telecom operators, Dire ICT Expo Ethiopia brings the latest technology innovations to benefit organizations operating or planning to engage in the expanding Ethiopian market. The Expo serves as a catalyst for collaboration and coopetition between foreign and local technology companies and a multitude of partners in the ICT ecosystems.</p> <p>The event combines unrivaled conference content with a major exhibition and a well-crafted networking opportunity. As Africa's diplomatic capital—and a rising conference tourism destination—enchanting Addis Ababa provides the appropriate setting for business travelers and those curious to explore the opportunities of the wider Ethiopian market.
+        </p>
+      </div>
     </div>
-</div>
-
-<section class="txt">
-  <h4>Fill in the form below</h4>
-  <div class="form-container">
-    <form id="myForm" action="process-form.php" method="POST">
-      <div class="one">
-        <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" required>
-      </div>
-  
-      <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" required>
-      </div>
-      </div>
-  
-      <div class="one">
-        <div class="form-group">
-          <label for="companyName">Company Name</label>
-          <input type="text" id="companyName" name="companyName" required>
-      </div>
-  
-      <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-      </div>
-      </div>
-  
-      <div class="one">
-        <div class="form-group">
-          <label for="phoneNumber">Phone Number</label>
-          <input type="text" id="phoneNumber" name="phoneNumber" required>
-      </div>
-      
-  
-      <div class="form-group" id="verificationGroup">
-          <label for="verification">Verification</label>
-          <input type="text" id="verification" name="verification" required>
-          <span id="verificationNumber"></span>
-      </div>
-      </div>
-  
-      <div class="form-group">
-          <input type="submit" value="Submit" class="submit-btn">
-      </div>
-  </form>
   </div>
-  </section>
-       </div>
-       </section>
-      
-  <button class="scroll-to-top" onclick="scrollToTop()">
-   
-    <i class="fas fa-arrow-up"></i></button>
-    
+  
+  <section class="txt">
+    <h4>Fill in the form below</h4>
+    <div class="form-container">
+      <form id="myForm" action="process-form.php" method="POST">
+        <div class="one">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
 
-       <section class="contact-section">
-        <div class="container">
-          <div class="row justify-content-evenly">
-            <div class="col-md-4 text-center">
-              <img src="assets/Date picker.gif" alt="Date & Venue Illustration" class="illustration">
-              <h3>Date & Venue</h3>
-              <p>May 14 - May 18, 2020</p>
-              <p>Addis Ababa, Ethiopia</p>
-            </div>
-            <div class="col-md-4 text-center">
-              <img src="assets/Get in touch.gif" alt="Get in Touch Illustration" class="illustration">
-              <h3>Get in Touch</h3>
-              <p>Email: info@example.com<br>Phone: +1 123 456 7890</p>
-            </div>
-            <div class="col-md-4 text-center">
-              <img src="assets/Share link.gif" alt="Quick Links Illustration" class="illustration">
-              <h3>Quick Links</h3>
-              <ul class="list-unstyled">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="exhibitors.html">Exhibitors</a></li>
-              </ul>
-              <div class="follow-us">
-                <h4>Follow Us</h4>
-                <ul class="social-media-icons unstyled">
-                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
           </div>
         </div>
-      </section>
-  
-      <script src="js.js"></script>
-<script>
-  const form = document.getElementById("myForm");
-form.addEventListener("submit", validateForm);
 
-// Generate a random number between 1 and 1000
-const verificationNumber = Math.floor(Math.random() * 1000) + 1;
-const verificationNumberElement = document.getElementById("verificationNumber");
-verificationNumberElement.textContent = `Enter the number: ${verificationNumber}`;
+        <div class="one">
+          <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" id="companyName" name="companyName" required>
+          </div>
 
-function validateForm(event) {
-  event.preventDefault();
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
 
-  const firstName = document.getElementById("firstName");
-  const lastName = document.getElementById("lastName");
-  const companyName = document.getElementById("companyName");
-  const email = document.getElementById("email");
-  const phoneNumber = document.getElementById("phoneNumber");
-  const verification = document.getElementById("verification");
+        <div class="one">
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
+          </div>
 
-  if (firstName.value.trim() === "") {
-    alert("Please enter your first name.");
-    return;
-  }
 
-  if (lastName.value.trim() === "") {
-    alert("Please enter your last name.");
-    return;
-  }
+          <div class="form-group" id="verificationGroup">
+            <label for="verification">Verification</label>
+            <input type="text" id="verification" name="verification" required>
+            <span id="verificationNumber"></span>
+          </div>
+        </div>
 
-  if (companyName.value.trim() === "") {
-    alert("Please enter your company name.");
-    return;
-  }
+        <div class="form-group">
+          <input type="submit" value="Submit" class="submit-btn">
+        </div>
+      </form>
+    </div>
+  </section>
 
-  if (email.value.trim() === "") {
-    alert("Please enter your email.");
-    return;
-  } else if (!isValidEmail(email.value)) {
-    alert("Please enter a valid email.");
-    return;
-  }
 
-  if (phoneNumber.value.trim() === "") {
-    alert("Please enter your phone number.");
-    return;
-  } else if (!isValidPhoneNumber(phoneNumber.value)) {
-    alert("Please enter a valid phone number.");
-    return;
-  }
+  <section class="competitions">
+    <div class="container">
+      <div class="competitions-list">
+        <div class="competition-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>App or Software Development Challenge</h3>
+          <p>Challenge participants to create a mobile app, software application, or digital solution addressing
+            a particular problem or need. This competition can attract developers, designers, and tech
+            entrepreneurs.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-palette"></i>
+          <h3>Design and UX/UI Challenge</h3>
+          <p>Invite designers to participate in a user experience (UX) or user interface (UI) design
+            competition. Participants can showcase their creativity and skills in creating visually appealing
+            and user-friendly digital interfaces.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Pitch Competition for Tech Startups</h3>
+          <p>Create a platform for tech startups to pitch their business ideas or products to potential
+            investors, mentors, and judges. This competition can support early-stage entrepreneurs in gaining
+            exposure and funding.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-brain"></i>
+          <h3>Artificial Intelligence (AI) Challenge</h3>
+          <p>Organize a competition focused on AI-related projects, such as developing AI models, chatbots,
+            virtual assistants, or predictive analytics solutions.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-vr-cardboard"></i>
+          <h3>Virtual Reality (VR) or Augmented Reality (AR) Challenge</h3>
+          <p>Encourage participants to create immersive VR or AR experiences, applications, or simulations that
+            showcase the potential of these technologies.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-cube"></i>
+          <h3>3D Printing Design Challenge</h3>
+          <p>Invite designers and engineers to create and present 3D-printable designs for innovative products,
+            gadgets, or prototypes.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-gamepad"></i>
+          <h3>E-sports Tournaments</h3>
+          <p>Incorporate technology-related e-sports tournaments, such as competitive video gaming, as a fun and
+            engaging way to attract tech-savvy participants.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-question"></i>
+          <h3>Tech Trivia or Quiz Contest</h3>
+          <p>Organize a technology-themed trivia or quiz contest that tests participants' knowledge about the
+            latest tech trends, historical milestones, and industry facts.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+        <div class="competition-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>STEM Competitions for Students</h3>
+          <p>Create challenges that encourage students to engage in science, technology, engineering, and
+            mathematics (STEM) activities, fostering their interest in tech-related fields.</p>
+          <a href="attend.html">Attend</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  if (verification.value.trim() === "") {
-    alert("Please enter the verification number.");
-    return;
-  } else if (parseInt(verification.value.trim()) !== verificationNumber) {
-    alert("Verification number is incorrect.");
-    return;
-  }
 
-  // Form is valid, submit data or perform further actions
-  form.submit();
-}
+  </div>
+  </section>
 
-function isValidEmail(email) {
-  // Email validation regex pattern
-  const emailPattern = /\S+@\S+\.\S+/;
-  return emailPattern.test(email);
-}
+  <button class="scroll-to-top" onclick="scrollToTop()">
 
-function isValidPhoneNumber(phoneNumber) {
-  // Phone number validation regex pattern
-  const phonePattern = /^\d{10}$/;
-  return phonePattern.test(phoneNumber);
-}
-</script>
+    <i class="fas fa-arrow-up"></i></button>
 
-<script>
-  // Retrieve the message from the query parameter
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const message = urlParams.get('message');
+  <section class="contact-section">
+    <div class="container">
+      <div class="row justify-content-evenly">
+        <div class="col-md-4 text-center">
+          <img src="assets/Date picker.gif" alt="Date & Venue Illustration" class="illustration">
+          <h3>Date & Venue</h3>
+          <p>Jan 24 - Jan 27, 2024</p>
+          <p>Addis Ababa, Ethiopia</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="assets/Get in touch.gif" alt="Get in Touch Illustration" class="illustration">
+          <h3>Get in Touch</h3>
+          <p>Email: info@direinttechexpo.com<br>
+            Phone: +251911027667</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="assets/Share link.gif" alt="Quick Links Illustration" class="illustration">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="exhibitors.html">Exhibitors</a></li>
+          </ul>
+          <div class="follow-us">
+            <h4>Follow Us</h4>
+            <ul class="social-media-icons unstyled">
+              <li><a href="https://www.facebook.com/profile.php?id=61550867035589&is_tour_completed=true"><i
+                    class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  // Display the message on the page
-  if (message) {
+  <script src="js.js"></script>
+  <script>
+    const form = document.getElementById("myForm");
+    form.addEventListener("submit", validateForm);
+
+    // Generate a random number between 1 and 1000
+    const verificationNumber = Math.floor(Math.random() * 1000) + 1;
+    const verificationNumberElement = document.getElementById("verificationNumber");
+    verificationNumberElement.textContent = `Enter the number: ${verificationNumber}`;
+
+    function validateForm(event) {
+      event.preventDefault();
+
+      const firstName = document.getElementById("firstName");
+      const lastName = document.getElementById("lastName");
+      const companyName = document.getElementById("companyName");
+      const email = document.getElementById("email");
+      const phoneNumber = document.getElementById("phoneNumber");
+      const verification = document.getElementById("verification");
+
+      if (firstName.value.trim() === "") {
+        alert("Please enter your first name.");
+        return;
+      }
+
+      if (lastName.value.trim() === "") {
+        alert("Please enter your last name.");
+        return;
+      }
+
+      if (companyName.value.trim() === "") {
+        alert("Please enter your company name.");
+        return;
+      }
+
+      if (email.value.trim() === "") {
+        alert("Please enter your email.");
+        return;
+      } else if (!isValidEmail(email.value)) {
+        alert("Please enter a valid email.");
+        return;
+      }
+
+      if (phoneNumber.value.trim() === "") {
+        alert("Please enter your phone number.");
+        return;
+      } else if (!isValidPhoneNumber(phoneNumber.value)) {
+        alert("Please enter a valid phone number.");
+        return;
+      }
+
+      if (verification.value.trim() === "") {
+        alert("Please enter the verification number.");
+        return;
+      } else if (parseInt(verification.value.trim()) !== verificationNumber) {
+        alert("Verification number is incorrect.");
+        return;
+      }
+
+      // Form is valid, submit data or perform further actions
+      form.submit();
+    }
+
+    function isValidEmail(email) {
+      // Email validation regex pattern
+      const emailPattern = /\S+@\S+\.\S+/;
+      return emailPattern.test(email);
+    }
+
+    function isValidPhoneNumber(phoneNumber) {
+      // Phone number validation regex pattern
+      const phonePattern = /^\d{10}$/;
+      return phonePattern.test(phoneNumber);
+    }
+  </script>
+
+  <script>
+    // Retrieve the message from the query parameter
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const message = urlParams.get('message');
+
+    // Display the message on the page
+    if (message) {
       alert(message);
-  }
-</script>
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-
-

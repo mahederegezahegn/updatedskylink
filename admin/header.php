@@ -1,4 +1,10 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Dire International Technology Expo</title>     <link rel="icon" type="image/png" href="assets/images/Ict expo final .png">
+               
+        
+</head>
 <header class="header">
   <nav class="flex justify-between">
     <a href="#">

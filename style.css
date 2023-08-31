@@ -40,7 +40,8 @@ header nav {
     background-color: rgb(255, 255
     , 255
     );
-    padding:10px 20px;
+    padding:0 20px;
+
     font-family: "Raleway";
     font-weight: bolder;
     position: sticky;
@@ -129,7 +130,101 @@ header nav {
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
-  
+
+  .competitions {
+    background-image: url('assets/images/Design Bado-01.png');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+  }
+
+  .competitions .container {
+    max-width:100%;
+    margin: 0 auto;
+  }
+
+  .competitions h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+
+  .competitions p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #fff;
+  }
+
+  .competitions-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .competition {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .competition:hover {
+    transform: translateY(-5px);
+  }
+
+  .competition i {
+    font-size: 3rem;
+    color: #36a2eb;
+    margin-bottom: 1.5rem;
+  }
+
+  .competition h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .competition p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  .competition a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .competition button {
+    background-color: #36a2eb;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .competition button:hover {
+    background-color: #258cbf;
+  }
+
+  @media (max-width: 768px) {
+    .competition {
+      max-width: 100%;
+    }
+  }
+
+
+
+
   .watch-live {
     color: #fff;
     background-color: #00000000;

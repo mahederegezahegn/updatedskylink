@@ -9,11 +9,20 @@
 <script src="js.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-      <title>Dire International Technology Expo</title>     <link rel="icon" type="image/png" href="assets/images/Ict expo final .jpg">
+      <title>Dire International Technology Expo</title>     <link rel="icon" type="image/png" href="assets/images/Ict expo final .png">
                
         
-</head>
 <style>
+
+.approvals i,
+.steps i,
+.requirements i {
+  font-size: 20px;
+  margin-right: 10px;
+  
+  color: #337ab7;
+}
+
    .img {
     background-color: rgb(195, 185, 185);
     position: relative;
@@ -33,6 +42,41 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .features {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.feature-item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.benefits li i{
+  font-size: 30px;
+  margin-right: 10px;
+  
+  color: #337ab7;
+}
+.feature-item i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #337ab7;
+}
+
+.feature-item h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #666;
+}
   .transparent-button {
     background: transparent;
     border: 2px solid blue;
@@ -75,7 +119,18 @@
  .txt tbody tr:hover {
     background-color: #e3e3e3;
   }
+  .description {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
 </style>
+</head>
 <body>
 
   <!-- Header -->
@@ -83,13 +138,13 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
            <a class="navbar-brand" href="index.html">
-          <img  class="dark-logo" alt="Skylink Technologies" width="210" height="70px" src="assets/images/logo image-01.png" /></a>
+            <img  class="dark-logo" alt="Skylink Technologies" width="210" height="120px" src="assets/images/Ict expo final .png" /></a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul  class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link  " href="index.html">Home</a>
             </li>
@@ -106,14 +161,17 @@
               <a class="nav-link" href="attend.html">Attend</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="news.php">News</a>
+              <a class="nav-link" href="what_new.php">News</a>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">sponsors</a>
+            </li>     
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   </header>
@@ -132,31 +190,58 @@
     <div class="exibitor">
       <section class="txt pt-3">
         <div class="container">
-          <h4>Why Exhibit</h4>
+          <!-- <h4>Why Exhibit</h4> -->
           <div class="content">
             <div class="illustration">
               <!-- Add your illustration here -->
               <img src="assets/Digital lifestyle.gif" alt="Illustration">
             </div>
             <div class="description">
-              <p>Meet Ethiopia’s foremost ICT leaders and gain access to a fast-growing market.</p>
-              <p>Meet buyers from one of Africa’s fastest-growing markets. With a population of 100 million people and an economy that has been growing rapidly for the past decade, Ethiopia represents a real exciting market opportunity in many sectors including ICTs.</p>
-              <p>ICT Expo Ethiopia provides the opportunity to capitalize on this potential and is a carefully crafted event combining exhibition, B2B meetings, panel discussions, and conference involving both local and international participants, all in one location.</p>
-              <p>To inquire about exhibition space or sponsorship, please contact: <a href="mailto:info@ictexpoethiopia.com">info@ictexpoethiopia.com</a></p>
+              <p>The technology event aims to provide a platform for various public and private organizations in the technology sector to showcase their products and services. <br> The event expects participation from established tech companies, startups, software developers, telecom providers, electronics manufacturers, e-commerce platforms, education/training providers, consulting firms, research centers, government agencies, non-profits, and hardware manufacturers. <br> These organizations cover areas such as artificial intelligence, blockchain, augmented/virtual reality, Internet of Things, enterprise software, mobile apps, cloud services, cybersecurity, electronic components, e-commerce, ICT skills, digital literacy, tech consulting, R&D, ICT policymaking, bridging the digital divide, and manufacturing computer hardware. <br> The event provides an opportunity for these organizations to promote their latest innovations and solutions. <br>
+              </p>
             </div>
-          </div>
-          <ul class="benefits">
+           
+          </div>  <ul class="benefits">
             <li><i class="fas fa-users"></i> Networking with decision makers and valuable partners in the space</li>
             <li><i class="fas fa-globe"></i> Public and private sector unrivaled audience</li>
             <li><i class="fas fa-plane"></i> Travel privileges</li>
           </ul>
+         
           <div class="cta">
-            <a href="book.html" class="button">Book Now <i class="fas fa-arrow-down"></i></a>
+            <a href="book.html" class="btn btn-primary">Book Now <i class="fas fa-arrow-down"></i></a>
           </div>
         </div>
       </section>
     </div>
-    
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Why Exhibit at Our Event?</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <i class="fas fa-store"></i>
+              <h3>Showcase Your Products and Services</h3>
+              <p>As an exhibitor, you'll have a dedicated space to showcase your products, services, and innovations. This allows attendees to interact with your offerings firsthand and gain a better understanding of what you provide.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <i class="fas fa-handshake"></i>
+              <h3>Direct Engagement with Potential Customers</h3>
+              <p>Events attract attendees who are interested in the industry or field that the event covers. Being an exhibitor provides you with the opportunity to engage directly with a targeted audience who are more likely to be interested in your offerings.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <i class="fas fa-chart-line"></i>
+              <h3>Lead Generation</h3>
+              <p>Exhibiting at the event allows you to collect leads from attendees who express interest in your products or services. These leads can be valuable for future marketing efforts and potential sales.</p>
+            </div>
+          </div>
+          <!-- Add more feature items as needed -->
+        </div>
+      </div>
+    </section>
     <section class="visa-process">
       <div class="container">
         <h4>VISA PROCESS TO ETHIOPIA</h4>
@@ -164,7 +249,7 @@
           <div class="description">
             <p>Visas are required for all foreign visitors to Ethiopia, with the exception of nationals of Kenya, Djibouti, and Diplomatic and UN passport holders.</p>
             <p>You must first register online and receive your registration confirmation before applying for a visa.</p>
-            <p>Once registered, please email a copy of your passport to the Secretariat at <a href="mailto:info@ictexpoethiopia.com">info@ictexpoethiopia.com</a>.</p>
+            <p>Once registered, please email a copy of your passport to the Secretariat at <a href="mailto:info@direictexpo.com">info@ictexpoethiopia.com</a>.</p>
             <p>The Secretariat will send you the necessary documents to apply for your conference e-visa over the following schedules:</p>
             <ul class="approvals">
               <li><i class="fas fa-check-circle"></i> First batch of approvals: April 21</li>
@@ -176,8 +261,9 @@
             <img src="assets/Study abroad-pana (1).png" alt="Visa Illustration">
           </div>
         </div>
+       <div class="flex-row" style="justify-content: space-around;" >
         <div class="steps">
-          <h5>Once on the website, you will select:</h5>
+          <h5 class="mb-3">Once on the website, you will select:</h5>
           <ul>
             <li><i class="fas fa-check"></i> Conference Visa</li>
             <li><i class="fas fa-check"></i> Government (as the inviting institution)</li>
@@ -191,25 +277,27 @@
             <li><i class="fas fa-check"></i> Electronic copy of your passport photo</li>
             <li><i class="fas fa-check"></i> Electronic copy of the application letter (will be sent to you)</li>
             <li><i class="fas fa-check"></i> Valid Credit Card to pay $32 online</li>
+            <li><i class="fas fa-exclamation-circle"></i> Additional documents for visa extension</li>
           </ul>
         </div>
-        <p class="approval-time">The process is straightforward, and you will secure your visa approval within 36 hours or less.</p>
-        <p>If you are not able to process your visa online, please notify the Secretariat for further support.</p>
+       </div>  <p class="approval-time">
+        <i class="fas fa-exclamation-circle" style="color: red; font-size: 20px; margin-right: 20px;"></i>The process is straightforward, and you will secure your visa approval within 36 hours or less.</p>
+        <p>
+          <i class="fas fa-exclamation-circle" style="color: red; font-size: 20px; margin-right: 20px;"></i>If you are not able to process your visa online, please notify the Secretariat for further support.</p>
       </div>
-    </section>
-    <section class="txt pt-3">
+    </section><section class="txt pt-3">
       <h4 style="text-align: center; color: #333;">CUSTOMS</h4>
            
       <div class="p-3" style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
         <p>If you are shipping materials to showcase at the expo, please note that you will have to follow the customs law of the country mainly:</p>
-        <ul>
-          <li><i class="fas fa-times"></i> You cannot sell any exhibit materials</li>
-          <li><i class="fas fa-dollar-sign"></i> Exhibit materials are subject to duty taxes</li>
-          <li><i class="fas fa-truck"></i> You are responsible for shipping and clearing your materials directly</li>
-          <li><i class="fas fa-file-alt"></i> The Secretariat will assist in getting your chosen clearing agent with the necessary documents to clear your goods</li>
-          <li><i class="fas fa-list-alt"></i> Please note that you will need to send a detailed packing list and commercial invoice on your letterhead showing each item with quantity and value</li>
-          <li><i class="fas fa-clock"></i> As certain electronic materials may require additional processes, you are strongly recommended to ship your products for the exhibit at least 20 working days ahead</li>
-          <li><i class="fas fa-map-marker-alt"></i> You will need a delivery address in Ethiopia for your goods, and note that the Secretariat cannot play that role for your goods</li>
+        <ul style="text-align: start;">
+          <li><i class="fas fa-times" style="margin:10px 10px ;  color: red; font-size: 16px;"></i> You cannot sell any exhibit materials</li>
+          <li><i class="fas fa-dollar-sign" style="margin:10px 10px ;  color: green; font-size: 16px;"></i> Exhibit materials are subject to duty taxes</li>
+          <li><i class="fas fa-truck" style="margin:10px 10px ;  color: blue; font-size: 16px;"></i> You are responsible for shipping and clearing your materials directly</li>
+          <li><i class="fas fa-file-alt" style="margin:10px 10px ;  color: orange; font-size: 16px;"></i> The Secretariat will assist in getting your chosen clearing agent with the necessary documents to clear your goods</li>
+          <li><i class="fas fa-list-alt" style="margin:10px 10px ;  color: purple; font-size: 16px;"></i> Please note that you will need to send a detailed packing list and commercial invoice on your letterhead showing each item with quantity and value</li>
+          <li><i class="fas fa-clock" style="margin:10px 10px ;  color: teal; font-size: 16px;"></i> As certain electronic materials may require additional processes, you are strongly recommended to ship your products for the exhibit at least 20 working days ahead</li>
+          <li><i class="fas fa-map-marker-alt" style="margin:10px 10px ;  color: brown; font-size: 16px;"></i> You will need a delivery address in Ethiopia for your goods, and note that the Secretariat cannot play that role for your goods</li>
         </ul>
       </div>
     

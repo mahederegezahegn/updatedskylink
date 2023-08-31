@@ -98,7 +98,7 @@ include_once('side.php');
         echo '</td>';
         echo '<td class="px-6 py-4 whitespace-nowrap">';
         echo '<div class="text-sm text-gray-900">' . $method . '</div>';
-        echo '</td>';
+        echo '</td>'; 
         echo '<td class="px-6 py-4 whitespace-nowrap">';
         echo '<div class="flex items-center gap-10">';
         echo '<a href="exibit_aprove.php?id=' . $exhibitorId . '" class="text-blue-500 hover:text-red-700">';
@@ -157,11 +157,12 @@ include_once('side.php');
         $zone = $row['company_name'];
         $service = $row['email'];
         $companyName = $row['phone_number'];
+        $approve=$row['approve'];
         $exhibitorId = $row['id']; // Assuming you have an 'id' column in the exhibitors table
   
         $verified=$row['verified'];
         // Generate the table rows dynamically
-        if($verified=='verified'){
+        if($verified=='verified'||$approve='0'){
         echo '<tr>';
         echo '<td class="px-6 py-4 whitespace-nowrap">';
         echo '<div class="text-sm text-gray-900">' . $fname . ' ' . $lname . '</div>';
